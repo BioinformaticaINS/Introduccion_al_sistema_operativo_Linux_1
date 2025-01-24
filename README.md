@@ -132,7 +132,7 @@ _En clase mencionaremos que contiene cada diretorio_
 
 ## Introducción a comandos básicos
 
-### **1. Introducción a la estructura típica de un proyecto NGS**
+### **1. Estructura típica de un proyecto NGS**
 Explica brevemente que un proyecto NGS necesita una organización clara para almacenar los datos crudos, resultados intermedios y análisis finales. Una estructura sugerida puede ser:
 
 ```
