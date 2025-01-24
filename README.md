@@ -7,9 +7,7 @@ Si quieres saber más sobre NGS te invitamos a que revises el tutorial de NGS: h
 ## Instructor 👨‍🏫  
 Manuel Alain Ramírez Sáenz --> Llámame `MARS`
 
-
 ## Bioinformática 🚀
-
 
 "La bioinformática comprende los métodos matemáticos, estadísticos y computacionales que pretenden solucionar  problemas biológicos usando secuencias de ADN y aminoácidos e información relacionada" `Fredj Tekaia - Instituto Pasteur`
 
@@ -30,7 +28,7 @@ Manuel Alain Ramírez Sáenz --> Llámame `MARS`
 
 ## Objetivo de la Bioinformática
 
-"Profundizar en nuestro entendimiento acerca de los organismos vivos y sus relaciones, partiendo desde el genoma que los codifica"
+Profundizar en nuestro entendimiento acerca de los organismos vivos y sus relaciones, partiendo desde el genoma que los codifica.
 
 ## Campos de trabajo
 
