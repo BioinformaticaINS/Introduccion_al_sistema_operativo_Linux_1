@@ -129,3 +129,127 @@ Todos los archivos se agrupan en la estructura de directorios. El sistema de arc
 ![image](https://github.com/bioinfoperu/Introduccion_a_Linux_para_bioinformatica/blob/main/img/Estructure_Directories.PNG)
 
 _En clase mencionaremos que contiene cada diretorio_
+
+## Introducción a comandos básicos
+
+### **1. Introducción a la estructura típica de un proyecto NGS**
+Explica brevemente que un proyecto NGS necesita una organización clara para almacenar los datos crudos, resultados intermedios y análisis finales. Una estructura sugerida puede ser:
+
+```
+Proyecto_NGS/
+├── raw_data/
+├── quality_control/
+├── assembly/
+├── annotation/
+├── results/
+└── scripts/
+```
+
+- **`raw_data/`**: Archivos FASTQ o BAM/CRAM originales.
+- **`quality_control/`**: Archivos generados tras realizar el control de calidad (por ejemplo, con `fastqc` o `multiqc`).
+- **`assembly/`**: Ensambles generados (fasta, índices, etc.).
+- **`annotation/`**: Archivos relacionados con anotación funcional.
+- **`results/`**: Resultados finales para el análisis.
+- **`scripts/`**: Scripts utilizados en el proyecto.
+
+---
+
+### **2. Ejercicio práctico: Crear la estructura desde cero**
+**Objetivo:** Enseñar comandos básicos como `mkdir`, `cd`, `ls`, `pwd`, `touch`, `cp`, y `mv`, mientras se crea y organiza la estructura de carpetas.
+
+#### **Paso 1: Crear la carpeta del proyecto**
+1. **Comando básico:** `mkdir`
+   - Introduce `mkdir` para crear la carpeta principal del proyecto.
+   - Ejemplo:  
+     ```bash
+     mkdir Proyecto_NGS
+     ```
+
+2. **Verificar la creación:** `ls`
+   - Ejemplo:  
+     ```bash
+     ls
+     ```
+
+---
+
+#### **Paso 2: Navegar dentro del proyecto**
+1. **Comando básico:** `cd`
+   - Muéstrales cómo entrar en la carpeta:
+     ```bash
+     cd Proyecto_NGS
+     ```
+2. **Verificar ubicación:** `pwd`
+   - Ejemplo:
+     ```bash
+     pwd
+     ```
+
+---
+
+#### **Paso 3: Crear subcarpetas**
+1. Usar `mkdir` para crear las subcarpetas.
+   - Ejemplo:
+     ```bash
+     mkdir raw_data quality_control assembly annotation results scripts
+     ```
+2. **Comando avanzado:** Crear varias carpetas al mismo tiempo.
+   - Explica cómo separar nombres con espacios para crear múltiples carpetas.
+
+---
+
+#### **Paso 4: Verificar la estructura**
+1. **Comando básico:** `ls -l`
+   - Ejemplo:
+     ```bash
+     ls -l
+     ```
+2. **Comando avanzado:** `tree` (si está instalado).
+   - Instalar y usar `tree` para mostrar la estructura jerárquica.
+
+---
+
+#### **Paso 5: Crear archivos vacíos**
+1. Usar `touch` para simular archivos:
+   - Ejemplo:
+     ```bash
+     touch raw_data/sample1.fastq raw_data/sample2.fastq
+     ```
+2. Mostrar cómo listar el contenido con `ls`.
+
+---
+
+#### **Paso 6: Mover y copiar archivos**
+1. Crear una copia de los archivos FASTQ en la carpeta de control de calidad:
+   ```bash
+   cp raw_data/sample1.fastq quality_control/
+   ```
+2. Renombrar un archivo con `mv`:
+   ```bash
+   mv quality_control/sample1.fastq quality_control/sample1_qc.fastq
+   ```
+
+---
+
+### **3. Integración de comandos adicionales**
+A medida que los estudiantes se familiaricen con los comandos básicos, puedes introducir conceptos como:
+- **Permisos:** `chmod`, `chown`.
+- **Buscar archivos:** `find`, `grep`.
+- **Compresión:** `gzip`, `tar`.
+- **Monitorización:** `du`, `df`.
+
+---
+
+### **4. Tarea opcional**
+Pídeles que creen un script en Bash para automatizar la creación de la estructura del proyecto y la generación de archivos vacíos. Ejemplo de script:
+
+```bash
+#!/bin/bash
+
+mkdir -p Proyecto_NGS/{raw_data,quality_control,assembly,annotation,results,scripts}
+touch Proyecto_NGS/raw_data/sample1.fastq Proyecto_NGS/raw_data/sample2.fastq
+```
+
+---
+
+Esta metodología no solo enseña los comandos básicos, sino que también ayuda a los estudiantes a visualizar cómo organizar sus propios proyectos bioinformáticos de manera eficiente. ¿Te gustaría que desarrollemos un guion más detallado o ejemplos adicionales?
