@@ -281,9 +281,16 @@ rm -rf ~/miniconda3/miniconda.sh
 
 ### ¿Cómo trabaja CONDA?
 
+![work](https://angus.readthedocs.io/en/2019/_static/conda2.png)
+
 ### Entornos de CONDA
 
 ### Canales de CONDA
+
+![channels](https://angus.readthedocs.io/en/2019/_static/conda4.png)
+
+![channels](https://angus.readthedocs.io/en/2019/_static/conda5.png)
+
 
 ```
 conda config --add channels defaults
