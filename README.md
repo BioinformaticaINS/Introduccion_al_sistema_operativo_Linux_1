@@ -1,9 +1,5 @@
 # Introducción al sistema operativo Linux 1
 
-Familiarizarse con los comandos básicos del sistema operativo Linux para el manejo de data relacionada con Next Generation Sequencing (NGS), en este caso trabajaremos con datos de la tecnología de Illumina.
-
-Si quieres saber más sobre NGS te invitamos a que revises el tutorial de NGS: https://github.com/bioinfoperu/Introduccion_Next_Genetarion_Sequencing
-
 ## Instructor 👨‍🏫  
 Manuel Alain Ramírez Sáenz --> Llámame `MARS`
 
@@ -47,7 +43,7 @@ La Bioinformática provee de algoritmos, bases de datos, interfaces y herramient
 
 ## Sistema operativo Linux
 
-Muchos desarrolladores de programas en Bioinformática prefieren el uso del sistema operativo Linux. Aqui algunos ejemplos sobre estos programas: FASTQC, trimmomatic, kraken, bwa, bowtie, SPAdes, etc. Dichos programas requieren de un usuario con un buen nivel en el manejo de Linux; sin embargo, muchos investigadores que necesitan trabajar con Next Generation Sequecing (NGS) no son familiares con el sistema operativo Linux y requieren de una introducción en el tema. Ahora, el usuario se preocupará entre conocer las características de Linux y los programas mientras aprende sobre las herramientas para NGS.
+Muchos desarrolladores de programas en Bioinformática prefieren el uso del sistema operativo Linux. Aqui algunos ejemplos sobre estos programas: FASTQC, trimmomatic, kraken, bwa, bowtie, SPAdes, etc. Dichos programas requieren de un usuario con un buen nivel en el manejo de Linux; sin embargo, muchos investigadores que necesitan trabajar con Next Generation Sequecing (NGS) no se familiarizan aún con el sistema operativo Linux y requieren de una introducción en el tema. 
 
 ## Objetivo
 
@@ -247,7 +243,3 @@ Pídeles que creen un script en Bash para automatizar la creación de la estruct
 mkdir -p Proyecto_NGS/{raw_data,quality_control,assembly,annotation,results,scripts}
 touch Proyecto_NGS/raw_data/sample1.fastq Proyecto_NGS/raw_data/sample2.fastq
 ```
-
----
-
-Esta metodología no solo enseña los comandos básicos, sino que también ayuda a los estudiantes a visualizar cómo organizar sus propios proyectos bioinformáticos de manera eficiente. ¿Te gustaría que desarrollemos un guion más detallado o ejemplos adicionales?
