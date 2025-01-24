@@ -41,30 +41,9 @@ Profundizar en nuestro entendimiento acerca de los organismos vivos y sus relaci
 
 La Bioinformática provee de algoritmos, bases de datos, interfaces y herramientas estadísticas para resolver nuestras preguntas biológicas.
 
-## Sistema operativo Linux
+## Definición y funciones básicas de un sistema operativo
 
-Muchos desarrolladores de programas en Bioinformática prefieren el uso del sistema operativo Linux. Aqui algunos ejemplos sobre estos programas: FASTQC, trimmomatic, kraken, bwa, bowtie, SPAdes, etc. Dichos programas requieren de un usuario con un buen nivel en el manejo de Linux; sin embargo, muchos investigadores que necesitan trabajar con Next Generation Sequecing (NGS) no se familiarizan aún con el sistema operativo Linux y requieren de una introducción en el tema. 
-
-## Objetivo
-
-El objetivo de este módulo es **introducir a los participantes en el sistema oprativo Linux** y cubrir con algunas cosas básicas que les permitirán correr algunos de los programas en sus computadoras o laptops. 
-
-## ¿Qué es LINUX?
-
-LINUX es un sistema operativo que fue desarrollado por primera vez en la década de los 90’s por Linus Torvalds, y ha estado en constante desarrollo desde entonces. Por sistema operativo, nos referimos al conjunto de programas que hacen que la computadora trabaje. Además Linux es:
-
-* Es un sistema multi-usuario estable. 
-* Multi-tarea para servidores, equipos de escritorio y portátiles.
-
-El sistemas Linux disponen de una interfaz gráfica de usuario (GUI), similar a Microsoft Windows, que proporciona un entorno fácil de usar; sin embargo, se requieren conocimientos de Linux para las operaciones que no estén cubiertos por un programa gráfico, o cuando no hay una interfaz de ventanas disponibles, por ejemplo, cuando se trabaja en un servidor local o en una nube, ya que ellos tienen una sesion de telnet. Hay muchas versiones diferentes de Linux, aunque comparten similitudes comunes. Las variedades más populares de LINUX son los sistemas Sun Solaris, GNU/Linux y MacOS X.
-
-## Sistema operativo Linux
-
-El sistema operativo LINUX se compone de tres partes: **el núcleo (Kernel), el shell y los programas.**
-
-![image](https://github.com/bioinfoperu/Introduccion_a_Linux_para_bioinformatica/blob/main/img/OS_Linux.PNG)
-
-_Introduction to Linux and Command Line Tools for Bioinformatics_ (Figure 1.1)
+## Estructura básica de un sistema operativo
 
 ## Interfaz Gráfica de Usuario (GUI) vs. Interfaz de Línea de Comandos (CLI)
 
@@ -78,13 +57,34 @@ _Introduction to Linux and Command Line Tools for Bioinformatics_ (Figure 1.1)
 | Apariencia       | Personalizable               | No personalizable                 |
 | Recursos         | Requiere más memoria         | Requiere menos memoria            |
 
-## El nucleo (kernel)
+## Sistemas operativos en Bioinformática
+
+## Linux
+
+### ¿Qué es LINUX?
+
+LINUX es un sistema operativo que fue desarrollado por primera vez en la década de los 90’s por Linus Torvalds, y ha estado en constante desarrollo desde entonces. Por sistema operativo, nos referimos al conjunto de programas que hacen que la computadora trabaje. Además Linux es:
+
+* Es un sistema multi-usuario estable. 
+* Multi-tarea para servidores, equipos de escritorio y portátiles.
+
+El sistemas Linux disponen de una interfaz gráfica de usuario (GUI), similar a Microsoft Windows, que proporciona un entorno fácil de usar; sin embargo, se requieren conocimientos de Linux para las operaciones que no estén cubiertos por un programa gráfico, o cuando no hay una interfaz de ventanas disponibles, por ejemplo, cuando se trabaja en un servidor local o en una nube, ya que ellos tienen una sesion de telnet. Hay muchas versiones diferentes de Linux, aunque comparten similitudes comunes. Las variedades más populares de LINUX son los sistemas Sun Solaris, GNU/Linux y MacOS X.
+
+### Sistema operativo Linux
+
+El sistema operativo LINUX se compone de tres partes: **el núcleo (Kernel), el shell y los programas.**
+
+![image](https://github.com/bioinfoperu/Introduccion_a_Linux_para_bioinformatica/blob/main/img/OS_Linux.PNG)
+
+_Introduction to Linux and Command Line Tools for Bioinformatics_ (Figure 1.1)
+
+### El nucleo (kernel)
 
 El kernel de Linux es el centro del sistema operativo: asigna el tiempo y la memoria a los programas, maneja el almacenamiento de archivos y la comunicación en respuesta a las llamadas del sistema operativo.
 
 Como ejemplo, la forma en que el **shell** y el **kernel** trabajan juntos, supongamos que un usuario escribe **rm myfile** (que tiene el efecto de eliminar el file myfile). El **shell** busca en el almacén de archivos, el archivo que contiene el programa rm, y luego pide al **kernel**, a través de las llamadas del sistema, ejecuta el programa **rm** en **myfile**. Cuando el proceso **rm myfile** ha terminado de ejecutarse, el shell devuelve el indicador de LINUX para el usuario, lo que indica que se está a la espera de nuevas órdenes.
 
-## El shell
+### El shell
   
 El **shell** actúa como una interfaz entre el **usuario** y el **kernel**. Cuando un usuario inicia una sesión, el programa de inicio de sesión comprueba el nombre de usuario y contraseña, y luego se inicia otro programa llamado el shell. El shell es un **intérprete de línea de comandos** (ILC). Interpreta los comandos que el usuario escribe para que puedan ser llevadas a cabo. Los comandos son los mismos programas, cuando se terminan, el shell retorna al al usuario para los siguientes pasos a desarrollar (**$** en nuestros sistemas).
 
@@ -98,7 +98,7 @@ El bash shell tiene ciertas características que ayudan al usuario introducir co
 
 `~$ history`
 
-## Archivos y Procesos
+### Archivos y Procesos
 
 **Todo en LINUX es un archivo.**
 
@@ -116,7 +116,7 @@ Ejemplos de archivos:
 
 * Un directorio, que contiene información acerca de su contenido, que puede ser una mezcla de otros directorios (subdirectorios) y archivos ordinarios.
 
-## La estructura de los directorios
+### La estructura de los directorios
 
 Todos los archivos se agrupan en la estructura de directorios. El sistema de archivos se organiza en una estructura jerárquica, como un **árbol invertido**. La parte superior de la jerarquía se denomina tradicionalmente **root** (escrita como una barra /)
 
@@ -243,3 +243,14 @@ Pídeles que creen un script en Bash para automatizar la creación de la estruct
 mkdir -p Proyecto_NGS/{raw_data,quality_control,assembly,annotation,results,scripts}
 touch Proyecto_NGS/raw_data/sample1.fastq Proyecto_NGS/raw_data/sample2.fastq
 ```
+
+## Instalación de ambientes en CONDA
+
+### CONDA
+
+CONDA como gestor de paquetes te ayuda a encontrar e instalar paquetes. Si necesitas un paquete que requiere una versión diferente de Python, no necesitas cambiar a un gestor de entorno diferente, porque CONDA también es un gestor de entorno.
+
+Con sólo unos pocos comandos, puedes configurar un entorno
+totalmente separado para ejecutar esa versión diferente de Python, mientras sigues ejecutando tu versión habitual de Python en tu entorno normal.
+
+https://miro.medium.com/v2/resize:fit:720/format:webp/0*hNmbKX5rGY19csb0.png
