@@ -254,3 +254,22 @@ Con sólo unos pocos comandos, puedes configurar un entorno
 totalmente separado para ejecutar esa versión diferente de Python, mientras sigues ejecutando tu versión habitual de Python en tu entorno normal.
 
 ![conda](https://miro.medium.com/v2/resize:fit:720/format:webp/0*hNmbKX5rGY19csb0.png)
+
+### Miniconda
+
+CONDA proporciona paquetes o binarios pre-compilados (lo que generalmente evita la necesidad de tener que compilar paquetes desde el código fuente).
+
+CONDA es multiplataforma, con soporte para Windows, MacOS, GNU/Linux, y soporte para múltiples plataformas de hardware, como x86 y Power 8 y 9.
+
+CONDA está pensado para proyectos en ciencia de datos (data scientists), con los que compartimos diseño y ejecución de proyectos (workflows).
+
+### Instalación de Miniconda
+
+```bash
+# creación de carpeta, preferiblemente en /home/USUARIO/
+mkdir -p ~/miniconda3
+#descargar el instalador
+wget repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
+#correr el instalador
+bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
+```
