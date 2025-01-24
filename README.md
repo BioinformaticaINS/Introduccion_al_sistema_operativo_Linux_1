@@ -253,4 +253,4 @@ CONDA como gestor de paquetes te ayuda a encontrar e instalar paquetes. Si neces
 Con sólo unos pocos comandos, puedes configurar un entorno
 totalmente separado para ejecutar esa versión diferente de Python, mientras sigues ejecutando tu versión habitual de Python en tu entorno normal.
 
-![conda][https://miro.medium.com/v2/resize:fit:720/format:webp/0*hNmbKX5rGY19csb0.png]
+![conda](https://miro.medium.com/v2/resize:fit:720/format:webp/0*hNmbKX5rGY19csb0.png)
