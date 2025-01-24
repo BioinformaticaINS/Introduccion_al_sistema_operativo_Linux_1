@@ -244,14 +244,19 @@ mkdir -p Proyecto_NGS/{raw_data,quality_control,assembly,annotation,results,scri
 touch Proyecto_NGS/raw_data/sample1.fastq Proyecto_NGS/raw_data/sample2.fastq
 ```
 
-## Instalación de ambientes en CONDA
+## Instalación de entornos en CONDA
+
+### ¿Qué es un entorno?
+
+Un entorno es un directorio que contiene una colección específica de paquetes o herramientas que ha instalado. Por ejemplo, puede tener un entorno con Python 2.7 y sus dependencias, y otro entorno con Python 3.4 para realizar pruebas heredadas. Si cambia un entorno, los demás no se verán afectados. Puede activar o desactivar entornos fácilmente, que es la forma de cambiar entre ellos.
+
+![entornos](https://angus.readthedocs.io/en/2019/_static/envs.png)
 
 ### CONDA
 
 CONDA como gestor de paquetes te ayuda a encontrar e instalar paquetes. Si necesitas un paquete que requiere una versión diferente de Python, no necesitas cambiar a un gestor de entorno diferente, porque CONDA también es un gestor de entorno.
 
-Con sólo unos pocos comandos, puedes configurar un entorno
-totalmente separado para ejecutar esa versión diferente de Python, mientras sigues ejecutando tu versión habitual de Python en tu entorno normal.
+Con sólo unos pocos comandos, puedes configurar un entorno totalmente separado para ejecutar esa versión diferente de Python, mientras sigues ejecutando tu versión habitual de Python en tu entorno normal.
 
 ![conda](https://miro.medium.com/v2/resize:fit:720/format:webp/0*hNmbKX5rGY19csb0.png)
 
