@@ -1,4 +1,4 @@
-# Introduccion al sistema operativo Linux 1
+# Introducción al sistema operativo Linux 1
 
 Familiarizarse con los comandos básicos del sistema operativo Linux para el manejo de data relacionada con Next Generation Sequencing (NGS), en este caso trabajaremos con datos de la tecnología de Illumina.
 
