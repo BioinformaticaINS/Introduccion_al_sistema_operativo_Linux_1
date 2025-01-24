@@ -278,3 +278,31 @@ rm -rf ~/miniconda3/miniconda.sh
 ~/miniconda3/bin/conda init bash
 # abrir un nuevo terminal y deberías encontrarte en:
 ```
+
+### ¿Cómo trabaja CONDA?
+
+### Entornos de CONDA
+
+### Canales de CONDA
+
+```
+conda config --add channels defaults
+conda config --add channels bioconda
+conda config --add channels conda-forge
+```
+
+### Comandos de CONDA
+
+|                 Comando de Conda                |                                                Acción                                                |
+|:-----------------------------------------------:|:----------------------------------------------------------------------------------------------------:|
+| `conda install`                                  | Instalar un paquete.                                                                                 |
+| `conda list`                                      | Listar los paquetes instalados en el entorno actualmente activo.                                     |
+| `conda search`                                    | Buscar un paquete en los canales configurados.                                                       |
+| `conda info`                                      | Mostrar información sobre el entorno actual.                                                         |
+| `conda remove`                                    | Eliminar un paquete de Conda.                                                                        |
+| `conda config --get channels`                     | Listar los canales activos y sus prioridades.                                                        |
+| `conda update`                                    | Actualizar todos los paquetes instalados.                                                            |
+| `conda config --remove channels unwanted_channel` | Eliminar un canal de Conda específico.                                                               |
+| `conda env list`                                  | Listar los diferentes entornos creados con Conda.                                                    |
+| `conda activate myNewEnvironment`                 | Activar el entorno de Conda llamado myNewEnvironment. También funciona para activar el entorno base. |
+| `conda info --envs`                               | Mostrar la ubicación de los directorios de Conda y los entornos disponibles.                         |
