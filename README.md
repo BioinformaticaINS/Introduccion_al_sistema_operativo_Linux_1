@@ -95,7 +95,7 @@ Un sistema operativo está organizado en varias capas o componentes que trabajan
 
 ### ¿Qué es LINUX?
 
-![Linux]()
+![Linux](https://github.com/BioinformaticaINS/Introduccion_al_sistema_operativo_Linux_1/blob/main/figuras/Linux.png)
 
 ### Sistema operativo Linux
 
