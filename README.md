@@ -71,11 +71,11 @@ La Bioinformática provee de algoritmos, bases de datos, interfaces y herramient
 **Definición:**  
 Un **sistema operativo (SO)** es el software principal que gestiona los recursos de hardware y software de una computadora, actuando como intermediario entre el usuario, las aplicaciones (como herramientas de bioinformática) y el hardware.
 
-
-
 ## Estructura básica de un sistema operativo
 
 Un sistema operativo está organizado en varias capas o componentes que trabajan juntos para gestionar los recursos de la computadora y permitir la ejecución de programas. Estas son las partes principales:
+
+![estructura](estructura.png)
 
 1. **Núcleo (Kernel):**  
    - Es el **corazón del sistema operativo**.  
