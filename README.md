@@ -75,37 +75,7 @@ Un **sistema operativo (SO)** es el software principal que gestiona los recursos
 
 Un sistema operativo está organizado en varias capas o componentes que trabajan juntos para gestionar los recursos de la computadora y permitir la ejecución de programas. Estas son las partes principales:
 
-![estructura.png](https://github.com/BioinformaticaINS/Introduccion_al_sistema_operativo_Linux_1/blob/main/figuras/estructura.png))
-
-1. **Núcleo (Kernel):**  
-   - Es el **corazón del sistema operativo**.  
-   - Gestiona los recursos del hardware, como la memoria, el procesador (CPU) y los dispositivos de entrada/salida (teclado, mouse, discos duros, etc.).  
-   - Se encarga de tareas críticas, como la asignación de memoria para programas y la gestión de procesos.  
-
-2. **Interfaz de usuario:**  
-   - Es la parte con la que los usuarios interactúan directamente.  
-   - Puede ser una **interfaz gráfica (GUI)**, como ventanas e íconos, o una **interfaz de línea de comandos (CLI)**, donde se escriben comandos de texto.  
-   - En bioinformática, muchas herramientas se usan desde la línea de comandos (CLI), especialmente en sistemas Linux.
-
-3. **Sistema de archivos:**  
-   - Organiza y gestiona cómo se almacenan y acceden los datos en el disco duro.  
-   - En bioinformática, es crucial para manejar grandes volúmenes de datos, como secuencias de DNA, archivos FASTQ, BAM, etc.  
-
-4. **Gestión de procesos:**  
-   - Controla la ejecución de programas (procesos) en la computadora.  
-   - Asigna tiempo de CPU a cada proceso y gestiona la ejecución de múltiples tareas al mismo tiempo (multitarea).  
-
-5. **Gestión de memoria:**  
-   - Administra el uso de la memoria RAM para que los programas puedan ejecutarse de manera eficiente.  
-   - En bioinformática, esto es importante porque herramientas como alineadores de secuencias o ensambladores de genomas requieren mucha memoria.  
-
-6. **Controladores de dispositivos (Drivers):**  
-   - Son programas que permiten al sistema operativo comunicarse con el hardware (impresoras, tarjetas gráficas, discos duros, etc.).  
-   - Por ejemplo, permiten que una computadora lea datos de un secuenciador de DNA.  
-
-7. **Servicios del sistema:**  
-   - Son programas que brindan funcionalidades adicionales, como la conexión a redes, la gestión de usuarios y permisos, o la instalación de software.  
-   - En bioinformática, estos servicios son esenciales para acceder a bases de datos en línea o usar herramientas en la nube.  
+![estructura.png](https://github.com/BioinformaticaINS/Introduccion_al_sistema_operativo_Linux_1/blob/main/figuras/estructura.png)
 
 ## Interfaz Gráfica de Usuario (GUI) vs. Interfaz de Línea de Comandos (CLI)
 
@@ -125,12 +95,7 @@ Un sistema operativo está organizado en varias capas o componentes que trabajan
 
 ### ¿Qué es LINUX?
 
-LINUX es un sistema operativo que fue desarrollado por primera vez en la década de los 90’s por Linus Torvalds, y ha estado en constante desarrollo desde entonces. Por sistema operativo, nos referimos al conjunto de programas que hacen que la computadora trabaje. Además Linux es:
-
-* Es un sistema multi-usuario estable. 
-* Multi-tarea para servidores, equipos de escritorio y portátiles.
-
-El sistemas Linux disponen de una interfaz gráfica de usuario (GUI), similar a Microsoft Windows, que proporciona un entorno fácil de usar; sin embargo, se requieren conocimientos de Linux para las operaciones que no estén cubiertos por un programa gráfico, o cuando no hay una interfaz de ventanas disponibles, por ejemplo, cuando se trabaja en un servidor local o en una nube, ya que ellos tienen una sesion de telnet. Hay muchas versiones diferentes de Linux, aunque comparten similitudes comunes. Las variedades más populares de LINUX son los sistemas Sun Solaris, GNU/Linux y MacOS X.
+![Linux]()
 
 ### Sistema operativo Linux
 
