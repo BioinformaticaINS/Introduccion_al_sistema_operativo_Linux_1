@@ -89,7 +89,9 @@ Un sistema operativo está organizado en varias capas o componentes que trabajan
 | Apariencia       | Personalizable               | No personalizable                 |
 | Recursos         | Requiere más memoria         | Requiere menos memoria            |
 
-## Sistemas operativos en Bioinformática
+## Sistemas operativos más usados mundialmente
+
+(Más usados)[https://gs.statcounter.com/os-market-share/desktop/worldwide]
 
 ## Linux
 
