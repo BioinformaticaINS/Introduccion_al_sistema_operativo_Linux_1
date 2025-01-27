@@ -28,16 +28,41 @@ Profundizar en nuestro entendimiento acerca de los organismos vivos y sus relaci
 
 ## Campos de trabajo
 
-* Genómica comparativa
-* Análisis de DNA (ORFs, contenidos GC, etc.)
-* Recuperación de secuencias.
-* Ensamblajes de secuencias.
-* Predicción de estructuras de proteínas.
-* Visualización de estructuras de proteínas.
-* Microarreglos.
-* PCR.
-* Filogenia.
-* Educación.
+1. **Genómica comparativa:**  
+   - Estudio de las similitudes y diferencias entre genomas de diferentes organismos.
+
+2. **Análisis de DNA:**  
+   - Identificación de ORFs (Marcos Abiertos de Lectura).  
+   - Análisis de contenido GC (proporción de bases Guanina y Citosina).  
+   - Anotación de secuencias genómicas.
+
+3. **Recuperación y ensamblaje de secuencias:**  
+   - Recuperación de secuencias de bases de datos genómicas.  
+   - Ensamblaje de secuencias a partir de datos de secuenciación (por ejemplo, lecturas cortas de NGS).
+
+4. **Predicción y visualización de estructuras de proteínas:**  
+   - Modelado de estructuras proteicas a partir de secuencias de aminoácidos.  
+   - Visualización de estructuras 3D de proteínas utilizando herramientas computacionales.
+
+5. **Microarreglos:**  
+   - Análisis de datos de expresión génica mediante microarreglos de DNA.
+
+6. **PCR (Reacción en Cadena de la Polimerasa):**  
+   - Diseño de cebadores y análisis de resultados de PCR.
+
+7. **Filogenia:**  
+   - Reconstrucción de árboles filogenéticos para estudiar relaciones evolutivas entre especies.
+
+8. **Metagenómica:**  
+   - Análisis de comunidades microbianas a partir de muestras ambientales.  
+   - Identificación y caracterización de genomas de microorganismos no cultivables.
+
+9. **Transcriptómica:**  
+   - Estudio de la expresión génica mediante el análisis de RNA.  
+   - Análisis de datos de RNA-seq para identificar genes activos y sus niveles de expresión.
+
+10. **Educación:**  
+    - Desarrollo de herramientas y recursos educativos para la enseñanza de la bioinformática.
 
 La Bioinformática provee de algoritmos, bases de datos, interfaces y herramientas estadísticas para resolver nuestras preguntas biológicas.
 
