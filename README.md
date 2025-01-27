@@ -666,6 +666,8 @@ rm -rf ~/miniconda3/miniconda.sh
 
 ### Entornos de CONDA
 
+![enviroment](https://cdn.prod.website-files.com/660c0df1e3166c3704dd67fc/6628cc978a3b3baaaad5ff6d_image-3.png)
+
 ### Canales de CONDA
 
 ![channels](https://angus.readthedocs.io/en/2019/_static/conda4.png)
