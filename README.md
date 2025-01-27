@@ -1,7 +1,7 @@
 # Introducción al sistema operativo Linux 1
 
 ## Instructor 👨‍🏫  
-Manuel Alain Ramírez Sáenz --> Llámame `MARS`
+Manuel Alain Ramírez Sáenz --> Llámame `Manuel`, `Manu` o `MARS`.
 
 ## Bioinformática 🚀
 
