@@ -91,7 +91,7 @@ Un sistema operativo está organizado en varias capas o componentes que trabajan
 
 ## Sistemas operativos más usados mundialmente
 
-(Más usados)[https://gs.statcounter.com/os-market-share/desktop/worldwide]
+https://gs.statcounter.com/os-market-share/desktop/worldwide
 
 ## Linux
 
@@ -109,29 +109,17 @@ El sistema operativo LINUX se compone de tres partes: **el núcleo (Kernel), el 
 
 El kernel de Linux es el centro del sistema operativo: asigna el tiempo y la memoria a los programas, maneja el almacenamiento de archivos y la comunicación en respuesta a las llamadas del sistema operativo.
 
-Como ejemplo, la forma en que el **shell** y el **kernel** trabajan juntos, supongamos que un usuario escribe **rm myfile** (que tiene el efecto de eliminar el file myfile). El **shell** busca en el almacén de archivos, el archivo que contiene el programa rm, y luego pide al **kernel**, a través de las llamadas del sistema, ejecuta el programa **rm** en **myfile**. Cuando el proceso **rm myfile** ha terminado de ejecutarse, el shell devuelve el indicador de LINUX para el usuario, lo que indica que se está a la espera de nuevas órdenes.
-
 ### El shell
   
 El **shell** actúa como una interfaz entre el **usuario** y el **kernel**. Cuando un usuario inicia una sesión, el programa de inicio de sesión comprueba el nombre de usuario y contraseña, y luego se inicia otro programa llamado el shell. El shell es un **intérprete de línea de comandos** (ILC). Interpreta los comandos que el usuario escribe para que puedan ser llevadas a cabo. Los comandos son los mismos programas, cuando se terminan, el shell retorna al al usuario para los siguientes pasos a desarrollar (**$** en nuestros sistemas).
-
-El usuario experto puede personalizar su propia shell, y los usuarios pueden utilizar diferentes shells en la misma máquina. Para el tema de hoy, el profesor y los alumnos la **bash** shell de forma predeterminada.
-
-El bash shell tiene ciertas características que ayudan al usuario introducir comandos.
-
-**Finalización del nombre** - Al escribir parte del nombre de un comando, nombre de archivo o directorio y pulsando el **Tab** (una vez), el bash shell completará el resto del nombre de forma automática. Si en el directorio se encuentra más de un nombre que empiece con esas letras que ha escrito, se emitirá un resultado, mostrará una cantidad de palabras o las palabras encontradas que empiezan con esas letras.
-
-**Historial** - El shell mantiene una lista de comandos que ha escrito. Si usted tiene que repetir un comando, utilice las teclas de cursor para desplazarse hacia arriba y abajo en la lista de comandos anteriores o puede escribir el comando **history** para poder observar una lista de los comandos que estuvo trabajando. 
-
-`~$ history`
 
 ### Archivos y Procesos
 
 **Todo en LINUX es un archivo.**
 
-Un proceso es un programa en ejecución identificado por un PID único (identificador de proceso).
+- Un archivo es una colección de datos. Son creados por los usuarios que utilizan los editores de texto, compiladores en procesos, etc.
 
-Un archivo es una colección de datos. Son creados por los usuarios que utilizan los editores de texto, compiladores en procesos, etc.
+- Un proceso es un programa en ejecución identificado por un PID único (identificador de proceso).
 
 Ejemplos de archivos:
 
@@ -575,14 +563,6 @@ echo "Estructura del proyecto NGS creada con éxito."
 
 ---
 
-### **Conclusión**
-
-Con estos comandos básicos, podrás organizar y gestionar eficientemente un proyecto de NGS. La práctica constante te ayudará a dominar estas herramientas y a prepararte para tareas más avanzadas en bioinformática. ¡Manos a la obra! 😊
-
----
-
-Esta versión mejora la claridad, añade ejemplos prácticos y proporciona una estructura más amigable para los estudiantes. ¡Espero que sea útil! 🚀
-
 ## Instalación de entornos en CONDA
 
 ### ¿Qué es un entorno?
@@ -870,3 +850,5 @@ echo "Entorno 'bioinfo_env' creado y paquetes instalados con éxito."
    ```bash
    ./crear_entorno.sh
    ```
+
+¡MUCHAS GRACIAS POR LA ATENCIÓN PRESTADA!
