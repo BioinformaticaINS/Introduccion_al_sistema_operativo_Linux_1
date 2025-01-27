@@ -199,7 +199,20 @@ Todos los archivos se agrupan en la estructura de directorios. El sistema de arc
 
 ![image](https://github.com/bioinfoperu/Introduccion_a_Linux_para_bioinformatica/blob/main/img/Estructure_Directories.PNG)
 
-_En clase mencionaremos que contiene cada diretorio_
+| Carpeta | Descripción                                                                                                                                                            |
+|---------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `/usr`   | Contiene archivos de solo lectura que son compartidos por todos los usuarios del sistema. Incluye aplicaciones, bibliotecas, documentación y otros recursos.           |
+| `/bin`    | Almacena comandos binarios esenciales que están disponibles para todos los usuarios. Estos comandos son necesarios para el funcionamiento básico del sistema.          |
+| `/nfs`    | Es un punto de montaje para sistemas de archivos de red (Network File System). Permite compartir archivos y directorios entre sistemas a través de una red.            |
+| `/var`    | Contiene archivos que cambian frecuentemente, como logs, bases de datos, correos electrónicos y archivos temporales.                                                   |
+| `/home`   | Almacena los directorios personales de los usuarios. Cada usuario tiene su propia subcarpeta dentro de /home donde puede guardar sus archivos personales.              |
+| `/local`  | Suele ser una subcarpeta dentro de /usr o /opt que contiene programas y datos específicos para el sistema local.                                                       |
+| `/fred`   | No es una carpeta estándar del sistema Linux. Podría ser un directorio personalizado o específico para un usuario o aplicación en particular.                          |
+| `/lib`    | Contiene bibliotecas compartidas esenciales para los binarios en /bin y /sbin. Estas bibliotecas son necesarias para el funcionamiento del sistema y las aplicaciones. |
+| `/man`    | Almacena las páginas del manual (manual pages) que proporcionan documentación sobre comandos y funciones del sistema.                                                  |
+| `/data`   | No es una carpeta estándar del sistema Linux. Podría ser un directorio personalizado para almacenar datos específicos de aplicaciones o usuarios.   |
+
+Las carpetas como `/rna`, `/pfam`, `/dna`, `/protein`, y `/cosmids` son directorios personalizados creados para fines específicos, como proyectos de investigación o aplicaciones particulares.
 
 ## Introducción a comandos básicos
 
