@@ -93,6 +93,7 @@ Un **sistema operativo (SO)** es el software principal que gestiona los recursos
 ## Estructura básica de un sistema operativo
 
 ![image](https://github.com/bioinfoperu/Introduccion_a_Linux_para_bioinformatica/blob/main/img/OS_Linux.PNG)
+*Un sistema operativo está organizado en varias capas o componentes que trabajan juntos para gestionar los recursos de la computadora y permitir la ejecución de programas. Estas son las partes principales*
 
 ## Interfaz Gráfica de Usuario (GUI) vs. Interfaz de Línea de Comandos (CLI)
 
