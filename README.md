@@ -36,8 +36,8 @@ Profundizar en nuestro entendimiento acerca de los organismos vivos y sus relaci
    - Análisis de contenido GC (proporción de bases Guanina y Citosina).  
    - Anotación de secuencias genómicas.
 
-3. **Recuperación y ensamblaje de secuencias:**  
-   - Recuperación de secuencias de bases de datos genómicas.  
+3. **Obtención y ensamblaje de lecturas:**  
+   - Obtención de lecturas de datos genómicas.  
    - Ensamblaje de secuencias a partir de datos de secuenciación (por ejemplo, lecturas cortas de NGS).
 
 4. **Predicción y visualización de estructuras de proteínas:**  
