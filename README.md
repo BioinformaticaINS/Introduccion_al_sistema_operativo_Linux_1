@@ -68,7 +68,31 @@ La Bioinformática provee de algoritmos, bases de datos, interfaces y herramient
 
 ## Definición y funciones básicas de un sistema operativo
 
+**Definición:**  
+Un **sistema operativo (SO)** es el software principal que gestiona los recursos de hardware y software de una computadora, actuando como intermediario entre el usuario, las aplicaciones (como herramientas de bioinformática) y el hardware.
+
+**Funciones básicas en bioinformática:**  
+1. **Gestión de recursos:**  
+   - Asigna memoria, procesamiento y almacenamiento para ejecutar programas de análisis de datos biológicos (por ejemplo, alineación de secuencias o ensamblaje de genomas).  
+
+2. **Ejecución de herramientas bioinformáticas:**  
+   - Permite correr software especializado (como BLAST, GROMACS o herramientas de RNA-seq) de manera eficiente.  
+
+3. **Manejo de archivos y datos:**  
+   - Organiza y gestiona grandes volúmenes de datos genómicos, proteómicos o de secuenciación.  
+
+4. **Interfaz de usuario:**  
+   - Proporciona entornos gráficos (GUI) o de línea de comandos (CLI) para interactuar con programas y scripts.  
+
+5. **Conectividad y redes:**  
+   - Facilita el acceso a bases de datos remotas (como NCBI o UniProt) y el uso de recursos en la nube.  
+
+6. **Seguridad y permisos:**  
+   - Protege datos sensibles (por ejemplo, genomas personales) y controla el acceso a recursos compartidos en servidores.  
+
 ## Estructura básica de un sistema operativo
+
+![image](https://github.com/bioinfoperu/Introduccion_a_Linux_para_bioinformatica/blob/main/img/OS_Linux.PNG)
 
 ## Interfaz Gráfica de Usuario (GUI) vs. Interfaz de Línea de Comandos (CLI)
 
@@ -99,7 +123,7 @@ El sistemas Linux disponen de una interfaz gráfica de usuario (GUI), similar a 
 
 El sistema operativo LINUX se compone de tres partes: **el núcleo (Kernel), el shell y los programas.**
 
-![image](https://github.com/bioinfoperu/Introduccion_a_Linux_para_bioinformatica/blob/main/img/OS_Linux.PNG)
+
 
 _Introduction to Linux and Command Line Tools for Bioinformatics_ (Figure 1.1)
 
