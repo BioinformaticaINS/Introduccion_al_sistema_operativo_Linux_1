@@ -75,7 +75,7 @@ Un **sistema operativo (SO)** es el software principal que gestiona los recursos
 
 Un sistema operativo está organizado en varias capas o componentes que trabajan juntos para gestionar los recursos de la computadora y permitir la ejecución de programas. Estas son las partes principales:
 
-![estructura](estructura.png)
+![estructura.png](https://github.com/BioinformaticaINS/Introduccion_al_sistema_operativo_Linux_1/blob/main/figuras/estructura.png))
 
 1. **Núcleo (Kernel):**  
    - Es el **corazón del sistema operativo**.  
