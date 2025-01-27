@@ -92,8 +92,37 @@ Un **sistema operativo (SO)** es el software principal que gestiona los recursos
 
 ## Estructura básica de un sistema operativo
 
-![image](https://github.com/bioinfoperu/Introduccion_a_Linux_para_bioinformatica/blob/main/img/OS_Linux.PNG)
-*Un sistema operativo está organizado en varias capas o componentes que trabajan juntos para gestionar los recursos de la computadora y permitir la ejecución de programas. Estas son las partes principales*
+Un sistema operativo está organizado en varias capas o componentes que trabajan juntos para gestionar los recursos de la computadora y permitir la ejecución de programas. Estas son las partes principales:
+
+1. **Núcleo (Kernel):**  
+   - Es el **corazón del sistema operativo**.  
+   - Gestiona los recursos del hardware, como la memoria, el procesador (CPU) y los dispositivos de entrada/salida (teclado, mouse, discos duros, etc.).  
+   - Se encarga de tareas críticas, como la asignación de memoria para programas y la gestión de procesos.  
+
+2. **Interfaz de usuario:**  
+   - Es la parte con la que los usuarios interactúan directamente.  
+   - Puede ser una **interfaz gráfica (GUI)**, como ventanas e íconos, o una **interfaz de línea de comandos (CLI)**, donde se escriben comandos de texto.  
+   - En bioinformática, muchas herramientas se usan desde la línea de comandos (CLI), especialmente en sistemas Linux.
+
+3. **Sistema de archivos:**  
+   - Organiza y gestiona cómo se almacenan y acceden los datos en el disco duro.  
+   - En bioinformática, es crucial para manejar grandes volúmenes de datos, como secuencias de DNA, archivos FASTQ, BAM, etc.  
+
+4. **Gestión de procesos:**  
+   - Controla la ejecución de programas (procesos) en la computadora.  
+   - Asigna tiempo de CPU a cada proceso y gestiona la ejecución de múltiples tareas al mismo tiempo (multitarea).  
+
+5. **Gestión de memoria:**  
+   - Administra el uso de la memoria RAM para que los programas puedan ejecutarse de manera eficiente.  
+   - En bioinformática, esto es importante porque herramientas como alineadores de secuencias o ensambladores de genomas requieren mucha memoria.  
+
+6. **Controladores de dispositivos (Drivers):**  
+   - Son programas que permiten al sistema operativo comunicarse con el hardware (impresoras, tarjetas gráficas, discos duros, etc.).  
+   - Por ejemplo, permiten que una computadora lea datos de un secuenciador de DNA.  
+
+7. **Servicios del sistema:**  
+   - Son programas que brindan funcionalidades adicionales, como la conexión a redes, la gestión de usuarios y permisos, o la instalación de software.  
+   - En bioinformática, estos servicios son esenciales para acceder a bases de datos en línea o usar herramientas en la nube.  
 
 ## Interfaz Gráfica de Usuario (GUI) vs. Interfaz de Línea de Comandos (CLI)
 
@@ -124,9 +153,7 @@ El sistemas Linux disponen de una interfaz gráfica de usuario (GUI), similar a 
 
 El sistema operativo LINUX se compone de tres partes: **el núcleo (Kernel), el shell y los programas.**
 
-
-
-_Introduction to Linux and Command Line Tools for Bioinformatics_ (Figure 1.1)
+![image](https://github.com/bioinfoperu/Introduccion_a_Linux_para_bioinformatica/blob/main/img/OS_Linux.PNG)
 
 ### El nucleo (kernel)
 
@@ -176,41 +203,265 @@ _En clase mencionaremos que contiene cada diretorio_
 
 ## Introducción a comandos básicos
 
-### **1. Estructura típica de un proyecto NGS**
-Explica brevemente que un proyecto NGS necesita una organización clara para almacenar los datos crudos, resultados intermedios y análisis finales. Una estructura sugerida puede ser:
+### **1. Comandos básicos para crear y navegar directorios**
 
-```
-Proyecto_NGS/
-├── raw_data/
-├── quality_control/
-├── assembly/
-├── annotation/
-├── results/
-└── scripts/
-```
+1. **`mkdir`**: Crear directorios (carpetas).  
+   - Ejemplo: Crear la carpeta principal del proyecto.  
+     ```bash
+     mkdir Proyecto_NGS
+     ```
+   - Crear múltiples subcarpetas al mismo tiempo:  
+     ```bash
+     mkdir raw_data quality_control assembly annotation results scripts
+     ```
 
-- **`raw_data/`**: Archivos FASTQ o BAM/CRAM originales.
-- **`quality_control/`**: Archivos generados tras realizar el control de calidad (por ejemplo, con `fastqc` o `multiqc`).
-- **`assembly/`**: Ensambles generados (fasta, índices, etc.).
-- **`annotation/`**: Archivos relacionados con anotación funcional.
-- **`results/`**: Resultados finales para el análisis.
-- **`scripts/`**: Scripts utilizados en el proyecto.
+2. **`cd`**: Cambiar de directorio (navegar entre carpetas).  
+   - Ejemplo: Entrar a la carpeta del proyecto.  
+     ```bash
+     cd Proyecto_NGS
+     ```
+   - Volver al directorio anterior:  
+     ```bash
+     cd ..
+     ```
+   - Ir al directorio personal (home):  
+     ```bash
+     cd ~
+     ```
+
+3. **`pwd`**: Mostrar la ruta completa del directorio actual.  
+   - Ejemplo: Verificar en qué carpeta estás trabajando.  
+     ```bash
+     pwd
+     ```
+
+4. **`ls`**: Listar el contenido de un directorio.  
+   - Ejemplo: Ver las carpetas y archivos dentro de `Proyecto_NGS`.  
+     ```bash
+     ls
+     ```
+   - Listar con detalles (permisos, tamaño, etc.):  
+     ```bash
+     ls -l
+     ```
+   - Listar todos los archivos, incluidos los ocultos:  
+     ```bash
+     ls -a
+     ```
 
 ---
 
-### **2. Ejercicio práctico: Crear la estructura desde cero**
-**Objetivo:** Enseñar comandos básicos como `mkdir`, `cd`, `ls`, `pwd`, `touch`, `cp`, y `mv`, mientras se crea y organiza la estructura de carpetas.
+### **2. Comandos para crear y gestionar archivos**
+
+1. **`touch`**: Crear archivos vacíos.  
+   - Ejemplo: Crear archivos FASTQ simulados.  
+     ```bash
+     touch raw_data/sample1.fastq raw_data/sample2.fastq
+     ```
+
+2. **`cp`**: Copiar archivos o directorios.  
+   - Ejemplo: Copiar un archivo FASTQ a la carpeta de control de calidad.  
+     ```bash
+     cp raw_data/sample1.fastq quality_control/
+     ```
+   - Copiar un directorio completo (usar `-r` para recursivo):  
+     ```bash
+     cp -r raw_data/ backup_raw_data/
+     ```
+
+3. **`mv`**: Mover o renombrar archivos o directorios.  
+   - Ejemplo: Mover un archivo a otra carpeta.  
+     ```bash
+     mv raw_data/sample1.fastq quality_control/
+     ```
+   - Renombrar un archivo:  
+     ```bash
+     mv quality_control/sample1.fastq quality_control/sample1_qc.fastq
+     ```
+
+4. **`rm`**: Eliminar archivos o directorios.  
+   - Ejemplo: Eliminar un archivo.  
+     ```bash
+     rm raw_data/sample1.fastq
+     ```
+   - Eliminar un directorio y su contenido (usar `-r` para recursivo):  
+     ```bash
+     rm -r backup_raw_data/
+     ```
+
+---
+
+### **3. Comandos para verificar y explorar la estructura**
+
+1. **`tree`**: Mostrar la estructura de directorios en forma de árbol.  
+   - Ejemplo: Ver la estructura completa del proyecto.  
+     ```bash
+     tree Proyecto_NGS
+     ```
+   - Si no tienes `tree` instalado, puedes instalarlo con:  
+     ```bash
+     sudo apt install tree  # En distribuciones basadas en Debian/Ubuntu
+     ```
+
+2. **`find`**: Buscar archivos o directorios.  
+   - Ejemplo: Buscar todos los archivos FASTQ en el proyecto.  
+     ```bash
+     find Proyecto_NGS -name "*.fastq"
+     ```
+
+3. **`du`**: Verificar el tamaño de archivos y directorios.  
+   - Ejemplo: Ver el tamaño de la carpeta `raw_data`.  
+     ```bash
+     du -sh raw_data/
+     ```
+
+---
+
+### **4. Comandos para comprimir y descomprimir archivos**
+
+1. **`gzip`**: Comprimir archivos.  
+   - Ejemplo: Comprimir un archivo FASTQ.  
+     ```bash
+     gzip raw_data/sample1.fastq
+     ```
+
+2. **`gunzip`**: Descomprimir archivos comprimidos con `gzip`.  
+   - Ejemplo: Descomprimir un archivo FASTQ.  
+     ```bash
+     gunzip raw_data/sample1.fastq.gz
+     ```
+
+3. **`tar`**: Crear o extraer archivos comprimidos en formato `.tar.gz`.  
+   - Ejemplo: Comprimir la carpeta `raw_data`.  
+     ```bash
+     tar -czvf raw_data.tar.gz raw_data/
+     ```
+   - Extraer un archivo `.tar.gz`:  
+     ```bash
+     tar -xzvf raw_data.tar.gz
+     ```
+
+---
+
+### **5. Comandos para permisos y propiedad**
+
+1. **`chmod`**: Cambiar permisos de archivos o directorios.  
+   - Ejemplo: Dar permisos de ejecución a un script.  
+     ```bash
+     chmod +x scripts/mi_script.sh
+     ```
+
+2. **`chown`**: Cambiar el propietario de un archivo o directorio.  
+   - Ejemplo: Cambiar el propietario de la carpeta `raw_data`.  
+     ```bash
+     sudo chown usuario:grupo raw_data/
+     ```
+
+---
+
+### **6. Comandos para visualizar y editar archivos**
+
+1. **`cat`**: Mostrar el contenido de un archivo.  
+   - Ejemplo: Ver el contenido de un archivo FASTQ.  
+     ```bash
+     cat raw_data/sample1.fastq
+     ```
+
+2. **`less`**: Visualizar archivos largos página por página.  
+   - Ejemplo: Navegar por un archivo FASTQ.  
+     ```bash
+     less raw_data/sample1.fastq
+     ```
+
+3. **`nano`**: Editor de texto en terminal.  
+   - Ejemplo: Editar un script en Bash.  
+     ```bash
+     nano scripts/mi_script.sh
+     ```
+
+---
+
+### **7. Comandos para redirección y tuberías (pipes)**
+
+1. **`>`**: Redirigir la salida de un comando a un archivo.  
+   - Ejemplo: Guardar la lista de archivos en un archivo de texto.  
+     ```bash
+     ls raw_data/ > lista_archivos.txt
+     ```
+
+2. **`|`**: Pasar la salida de un comando como entrada a otro.  
+   - Ejemplo: Contar el número de archivos FASTQ.  
+     ```bash
+     ls raw_data/ | grep ".fastq" | wc -l
+     ```
+
+---
+
+### **Resumen de comandos esenciales**
+
+| Comando | Descripción |
+|---------|-------------|
+| `mkdir` | Crear directorios. |
+| `cd`    | Cambiar de directorio. |
+| `pwd`   | Mostrar la ruta actual. |
+| `ls`    | Listar archivos y directorios. |
+| `touch` | Crear archivos vacíos. |
+| `cp`    | Copiar archivos o directorios. |
+| `mv`    | Mover o renombrar archivos o directorios. |
+| `rm`    | Eliminar archivos o directorios. |
+| `tree`  | Mostrar la estructura de directorios. |
+| `find`  | Buscar archivos o directorios. |
+| `gzip`  | Comprimir archivos. |
+| `tar`   | Crear o extraer archivos comprimidos. |
+| `chmod` | Cambiar permisos. |
+| `cat`   | Mostrar el contenido de un archivo. |
+| `less`  | Visualizar archivos largos. |
+| `nano`  | Editar archivos de texto. |
+
+## **Introducción a comandos básicos para proyectos NGS**
+
+Ahora utilizaremos comandos básicos de Linux para organizar y gestionar la estructura de un proyecto de **Next-Generation Sequencing (NGS)**. Estos comandos son esenciales para trabajar en bioinformática, ya que te permiten crear directorios, moverte entre carpetas, manipular archivos y automatizar tareas.
+
+### **1. Estructura típica de un proyecto NGS**
+
+Un proyecto de NGS requiere una organización clara para almacenar los datos crudos, resultados intermedios y análisis finales. A continuación, se propone una estructura de carpetas sugerida:
+
+```
+Proyecto_NGS/
+├── raw_data/          # Datos crudos (FASTQ, BAM/CRAM)
+├── quality_control/   # Resultados de control de calidad
+├── assembly/          # Ensambles generados (FASTA, índices)
+├── annotation/        # Anotaciones funcionales
+├── results/           # Resultados finales del análisis
+└── scripts/           # Scripts utilizados en el proyecto
+```
+
+#### **Descripción de las carpetas:**
+- **`raw_data/`**: Contiene los archivos FASTQ o BAM/CRAM originales generados por el secuenciador.
+- **`quality_control/`**: Aloja los resultados del control de calidad (por ejemplo, informes de `fastqc` o `multiqc`).
+- **`assembly/`**: Guarda los ensambles genómicos o transcriptómicos en formato FASTA, así como índices asociados.
+- **`annotation/`**: Archivos relacionados con la anotación funcional de genes o proteínas.
+- **`results/`**: Resultados finales del análisis, como tablas de expresión génica o variantes identificadas.
+- **`scripts/`**: Scripts en Bash, Python u otros lenguajes utilizados para automatizar tareas.
+
+---
+
+### **2. Comandos básicos para crear y organizar la estructura**
+
+A continuación, se presentan los comandos esenciales para crear y gestionar la estructura de un proyecto NGS.
+
+---
 
 #### **Paso 1: Crear la carpeta del proyecto**
-1. **Comando básico:** `mkdir`
-   - Introduce `mkdir` para crear la carpeta principal del proyecto.
-   - Ejemplo:  
+
+1. **`mkdir`**: Crear directorios.  
+   - Crea la carpeta principal del proyecto:  
      ```bash
      mkdir Proyecto_NGS
      ```
 
-2. **Verificar la creación:** `ls`
-   - Ejemplo:  
+2. **`ls`**: Listar el contenido de un directorio.  
+   - Verifica que la carpeta se creó correctamente:  
      ```bash
      ls
      ```
@@ -218,13 +469,15 @@ Proyecto_NGS/
 ---
 
 #### **Paso 2: Navegar dentro del proyecto**
-1. **Comando básico:** `cd`
-   - Muéstrales cómo entrar en la carpeta:
+
+1. **`cd`**: Cambiar de directorio.  
+   - Entra a la carpeta del proyecto:  
      ```bash
      cd Proyecto_NGS
      ```
-2. **Verificar ubicación:** `pwd`
-   - Ejemplo:
+
+2. **`pwd`**: Mostrar la ruta actual.  
+   - Confirma que estás dentro de `Proyecto_NGS`:  
      ```bash
      pwd
      ```
@@ -232,67 +485,140 @@ Proyecto_NGS/
 ---
 
 #### **Paso 3: Crear subcarpetas**
-1. Usar `mkdir` para crear las subcarpetas.
-   - Ejemplo:
+
+1. **`mkdir`**: Crear múltiples subcarpetas.  
+   - Crea las subcarpetas necesarias:  
      ```bash
      mkdir raw_data quality_control assembly annotation results scripts
      ```
-2. **Comando avanzado:** Crear varias carpetas al mismo tiempo.
-   - Explica cómo separar nombres con espacios para crear múltiples carpetas.
 
----
-
-#### **Paso 4: Verificar la estructura**
-1. **Comando básico:** `ls -l`
-   - Ejemplo:
+2. **`ls -l`**: Listar con detalles.  
+   - Verifica la creación de las subcarpetas:  
      ```bash
      ls -l
      ```
-2. **Comando avanzado:** `tree` (si está instalado).
-   - Instalar y usar `tree` para mostrar la estructura jerárquica.
 
 ---
 
-#### **Paso 5: Crear archivos vacíos**
-1. Usar `touch` para simular archivos:
-   - Ejemplo:
+#### **Paso 4: Crear archivos vacíos**
+
+1. **`touch`**: Crear archivos vacíos.  
+   - Simula archivos FASTQ en la carpeta `raw_data`:  
      ```bash
      touch raw_data/sample1.fastq raw_data/sample2.fastq
      ```
-2. Mostrar cómo listar el contenido con `ls`.
+
+2. **`ls`**: Listar archivos.  
+   - Verifica que los archivos se crearon:  
+     ```bash
+     ls raw_data
+     ```
 
 ---
 
-#### **Paso 6: Mover y copiar archivos**
-1. Crear una copia de los archivos FASTQ en la carpeta de control de calidad:
-   ```bash
-   cp raw_data/sample1.fastq quality_control/
-   ```
-2. Renombrar un archivo con `mv`:
-   ```bash
-   mv quality_control/sample1.fastq quality_control/sample1_qc.fastq
-   ```
+#### **Paso 5: Mover y copiar archivos**
+
+1. **`cp`**: Copiar archivos.  
+   - Copia un archivo FASTQ a la carpeta de control de calidad:  
+     ```bash
+     cp raw_data/sample1.fastq quality_control/
+     ```
+
+2. **`mv`**: Mover o renombrar archivos.  
+   - Renombra el archivo en la carpeta de control de calidad:  
+     ```bash
+     mv quality_control/sample1.fastq quality_control/sample1_qc.fastq
+     ```
 
 ---
 
-### **3. Integración de comandos adicionales**
-A medida que los estudiantes se familiaricen con los comandos básicos, puedes introducir conceptos como:
-- **Permisos:** `chmod`, `chown`.
-- **Buscar archivos:** `find`, `grep`.
-- **Compresión:** `gzip`, `tar`.
-- **Monitorización:** `du`, `df`.
+#### **Paso 6: Verificar la estructura**
+
+1. **`tree`**: Mostrar la estructura de directorios.  
+   - Si tienes `tree` instalado, visualiza la estructura del proyecto:  
+     ```bash
+     tree Proyecto_NGS
+     ```
+   - Si no lo tienes, instálalo con:  
+     ```bash
+     sudo apt install tree  # En distribuciones basadas en Debian/Ubuntu
+     ```
+
+2. **`find`**: Buscar archivos.  
+   - Busca todos los archivos FASTQ en el proyecto:  
+     ```bash
+     find Proyecto_NGS -name "*.fastq"
+     ```
 
 ---
 
-### **4. Tarea opcional**
-Pídeles que creen un script en Bash para automatizar la creación de la estructura del proyecto y la generación de archivos vacíos. Ejemplo de script:
+### **3. Comandos adicionales útiles**
+
+A medida que te familiarices con los comandos básicos, puedes explorar herramientas más avanzadas:
+
+1. **`gzip`**: Comprimir archivos.  
+   - Comprime un archivo FASTQ:  
+     ```bash
+     gzip raw_data/sample1.fastq
+     ```
+
+2. **`chmod`**: Cambiar permisos.  
+   - Da permisos de ejecución a un script:  
+     ```bash
+     chmod +x scripts/mi_script.sh
+     ```
+
+3. **`cat`**: Mostrar el contenido de un archivo.  
+   - Visualiza un archivo FASTQ:  
+     ```bash
+     cat raw_data/sample1.fastq
+     ```
+
+4. **`less`**: Visualizar archivos largos.  
+   - Navega por un archivo FASTQ:  
+     ```bash
+     less raw_data/sample1.fastq
+     ```
+
+---
+
+### **4. Automatización con un script en Bash**
+
+Para ahorrar tiempo, puedes crear un script en Bash que automatice la creación de la estructura del proyecto y la generación de archivos vacíos. Ejemplo de script:
 
 ```bash
 #!/bin/bash
 
+# Crear la estructura de carpetas
 mkdir -p Proyecto_NGS/{raw_data,quality_control,assembly,annotation,results,scripts}
+
+# Crear archivos FASTQ vacíos
 touch Proyecto_NGS/raw_data/sample1.fastq Proyecto_NGS/raw_data/sample2.fastq
+
+# Mensaje de confirmación
+echo "Estructura del proyecto NGS creada con éxito."
 ```
+
+**Instrucciones para ejecutar el script:**
+1. Guarda el código en un archivo, por ejemplo, `crear_proyecto.sh`.
+2. Dale permisos de ejecución:  
+   ```bash
+   chmod +x crear_proyecto.sh
+   ```
+3. Ejecuta el script:  
+   ```bash
+   ./crear_proyecto.sh
+   ```
+
+---
+
+### **Conclusión**
+
+Con estos comandos básicos, podrás organizar y gestionar eficientemente un proyecto de NGS. La práctica constante te ayudará a dominar estas herramientas y a prepararte para tareas más avanzadas en bioinformática. ¡Manos a la obra! 😊
+
+---
+
+Esta versión mejora la claridad, añade ejemplos prácticos y proporciona una estructura más amigable para los estudiantes. ¡Espero que sea útil! 🚀
 
 ## Instalación de entornos en CONDA
 
@@ -368,3 +694,214 @@ conda config --add channels conda-forge
 | `conda env list`                                  | Listar los diferentes entornos creados con Conda.                                                    |
 | `conda activate myNewEnvironment`                 | Activar el entorno de Conda llamado myNewEnvironment. También funciona para activar el entorno base. |
 | `conda info --envs`                               | Mostrar la ubicación de los directorios de Conda y los entornos disponibles.                         |
+
+---
+
+## **Ejercicio práctico: Creación y gestión de entornos con CONDA**
+
+### **Objetivo:**
+Aprender a crear, activar y gestionar entornos virtuales con CONDA, así como instalar paquetes específicos para proyectos de bioinformática.
+
+---
+
+### **1. Instalación de Miniconda (si no está instalado)**
+
+Si no tienes Miniconda instalado, sigue estos pasos:
+
+```bash
+# Crear carpeta para Miniconda
+mkdir -p ~/miniconda3
+
+# Descargar el instalador
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
+
+# Ejecutar el instalador
+bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
+
+# Eliminar el instalador
+rm -rf ~/miniconda3/miniconda.sh
+
+# Inicializar Conda en el terminal
+~/miniconda3/bin/conda init bash
+
+# Cerrar y abrir un nuevo terminal para aplicar los cambios
+```
+
+---
+
+### **2. Configuración de canales**
+
+Antes de crear entornos, configura los canales de CONDA para acceder a paquetes de bioinformática:
+
+```bash
+conda config --add channels defaults
+conda config --add channels bioconda
+conda config --add channels conda-forge
+```
+
+Verifica que los canales estén correctamente configurados:
+
+```bash
+conda config --get channels
+```
+
+---
+
+### **3. Creación de un entorno**
+
+1. **Crear un entorno llamado `bioinfo_env` con Python 3.9:**
+   ```bash
+   conda create -n bioinfo_env python=3.9
+   ```
+
+2. **Activar el entorno:**
+   ```bash
+   conda activate bioinfo_env
+   ```
+
+3. **Verificar que el entorno está activo:**
+   - El nombre del entorno (`bioinfo_env`) debería aparecer al principio del prompt en tu terminal.
+
+---
+
+### **4. Instalación de paquetes**
+
+1. **Instalar herramientas de bioinformática:**
+   - Instala `fastqc` para control de calidad y `multiqc` para resumir resultados:
+     ```bash
+     conda install -c bioconda fastqc multiqc
+     ```
+
+   - Instala `bwa` para alineamiento de secuencias:
+     ```bash
+     conda install -c bioconda bwa
+     ```
+
+2. **Verificar la instalación:**
+   - Lista los paquetes instalados en el entorno:
+     ```bash
+     conda list
+     ```
+
+---
+
+### **5. Desactivar y reactivar el entorno**
+
+1. **Desactivar el entorno:**
+   ```bash
+   conda deactivate
+   ```
+
+2. **Reactivar el entorno:**
+   ```bash
+   conda activate bioinfo_env
+   ```
+
+---
+
+### **6. Eliminar un entorno**
+
+Si ya no necesitas el entorno, puedes eliminarlo:
+
+1. **Desactivar el entorno (si está activo):**
+   ```bash
+   conda deactivate
+   ```
+
+2. **Eliminar el entorno `bioinfo_env`:**
+   ```bash
+   conda env remove -n bioinfo_env
+   ```
+
+3. **Verificar que el entorno ha sido eliminado:**
+   ```bash
+   conda env list
+   ```
+
+---
+
+### **7. Crear un entorno desde un archivo YAML**
+
+1. **Crear un archivo YAML (`environment.yml`) con la siguiente configuración:**
+   ```yaml
+   name: ngs_env
+   channels:
+     - defaults
+     - bioconda
+     - conda-forge
+   dependencies:
+     - python=3.8
+     - fastqc
+     - multiqc
+     - bwa
+     - samtools
+   ```
+
+2. **Crear el entorno a partir del archivo YAML:**
+   ```bash
+   conda env create -f environment.yml
+   ```
+
+3. **Activar el entorno:**
+   ```bash
+   conda activate ngs_env
+   ```
+
+4. **Verificar los paquetes instalados:**
+   ```bash
+   conda list
+   ```
+
+---
+
+### **8. Exportar un entorno a un archivo YAML**
+
+Si deseas compartir o replicar un entorno, puedes exportarlo a un archivo YAML:
+
+1. **Activar el entorno que deseas exportar:**
+   ```bash
+   conda activate ngs_env
+   ```
+
+2. **Exportar el entorno a un archivo YAML:**
+   ```bash
+   conda env export > ngs_env.yml
+   ```
+
+3. **Compartir el archivo YAML con otros usuarios para que puedan recrear el entorno:**
+   ```bash
+   conda env create -f ngs_env.yml
+   ```
+
+---
+
+### **9. Tarea opcional: Automatización con un script**
+
+Crea un script en Bash para automatizar la creación de un entorno y la instalación de paquetes. Ejemplo de script (`crear_entorno.sh`):
+
+```bash
+#!/bin/bash
+
+# Crear el entorno
+conda create -n bioinfo_env python=3.9 -y
+
+# Activar el entorno
+conda activate bioinfo_env
+
+# Instalar paquetes
+conda install -c bioconda fastqc multiqc bwa samtools -y
+
+# Mensaje de confirmación
+echo "Entorno 'bioinfo_env' creado y paquetes instalados con éxito."
+```
+
+**Instrucciones para ejecutar el script:**
+1. Guarda el código en un archivo, por ejemplo, `crear_entorno.sh`.
+2. Dale permisos de ejecución:  
+   ```bash
+   chmod +x crear_entorno.sh
+   ```
+3. Ejecuta el script:  
+   ```bash
+   ./crear_entorno.sh
+   ```
